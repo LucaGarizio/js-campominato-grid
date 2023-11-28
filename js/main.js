@@ -9,30 +9,39 @@
 // Ad esempio: Di cosa ho bisogno per generare i numeri? Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dati giusti. Le validazioni e i controlli possiamo farli anche in un secondo momento.
 
 // creare const da legare al click dell'evento
-const iniziaGioco = document.getElementById("genera-campo");
-
+const startGame = document.getElementById("genera-campo");
+// creare const per appendere celle
 const container = document.querySelector(".container");
 
 
 
 // creare evento on click
-iniziaGioco.addEventListener("click", 
-    // creare funzione per creazione celle 100
+startGame.addEventListener("click", 
+    // creare funzione per creazione celle
     function(){
         for (let i = 1; i <= 100; i++) {
+
             // creare const per creare elemento div
             const square = document.createElement("div");
-            // collego la class css all'elemento creato
+
+            // collegare classe css all'elemento creato
             square.classList.add("square")
+
+            // collegamento cella al rispettivo numero
             square.append(i);
+
             // crezione elemento in html
             container.append(square);
 
             // creazione evento per cambio di colore della cella al click
             square.addEventListener("click",
                 function(){
+
+                    // collegamento classe css all'elemento square
                     square.classList.add("clicked");
-                    console.log("Hai cliccato la cella n°: "+ i);
+
+                    // stampare su schermo il numero della cella selezionata
+                    alert("Hai selezionato la cella n°: "+ i);
                 }
             );
         }   
