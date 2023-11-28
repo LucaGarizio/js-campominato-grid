@@ -19,6 +19,8 @@ const container = document.querySelector(".container");
 startGame.addEventListener("click", 
     // creare funzione per creazione celle
     function(){
+        // svuota il contenuto del container cosi da non far comparire celle ogni volta che si clicca il tasto play
+        container.innerHTML = "";
         for (let i = 1; i <= 100; i++) {
 
             // creare const per creare elemento div
