@@ -50,8 +50,7 @@ main{
 .container{
     width: 40%;
     display: flex;
-    flex-wrap: wrap;
-    
+    flex-wrap: wrap;    
 }
 
 .square {
@@ -59,8 +58,13 @@ main{
     width: 10%;
     height: 60px;
     border: 1px solid black;
+    justify-content: center;
+    align-items: center;
 }
 
+.clicked{
+    background-color: lightblue;
+}
 
 /* footer */
 footer{
@@ -69,7 +73,6 @@ footer{
     display: flex;
     align-items: center;
 }
-
 
 span {
     margin-left: 20px;
